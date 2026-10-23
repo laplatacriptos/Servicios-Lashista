@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*tipografia: font-family: 'Lato', sans-serif; */
+
+*{margin: 0; padding: 0;box-sizing: border-box;font-family: 'Lato', sans-serif;text-decoration: none;font-size: 16px;}
+html, body{width: 100%;overflow-x: hidden;}
+body{background-color: white;}
+
+/*body{background-color: #4b0081;}*/
+.logo{display: flex;align-items: center;justify-content: center;background-color: hsl(0, 0%, 13%);height: 90px;}
+.logo h4{font-size: 1rem;color: white;}
+.logo strong{font-size: 1.5rem;font-weight: 700;color: white;}
+h2{color: #4b0081;}
+h1{font-size: 2rem; color: #4b0081;text-align: center;padding: 5%;text-transform: uppercase; font-weight: 900;margin: 0;}
+
+section{margin: auto; overflow: hidden; width: 375px; height: auto;box-shadow: 0px 0px 0px 2px #ded7e4;border-radius: 10px;background-color: white;padding: 30px;text-align: center;}
+
+label{margin-top: 10px;height: 30px;font-size: .8rem;display: flex;}
+input{display: inline;width: 100%;box-shadow: 0px 0px 0px 2px #ded7e4;background-color: white;padding: 10px;border-radius: 10px;font-size: 1.1rem;margin: auto;border: none;}
+select{width: 170px;border: none;background-color:white;padding: 10px;border-radius: 10px;margin: auto;margin-top: 20px;font-size: 16px;}
+
+em{margin-right: 7px;color: red;font-size: 1.5rem;vertical-align: middle;}
+button{padding: 15px 30px;background-color: #4b0081; border: none;color: white;font-weight: 700;text-transform: uppercase;border-radius: 5px;height: 50px;}
+button:hover{background-color: white;color: #4b0081;transition: 0.5s ease-in-out;}
+#confirm-form{display: none;}
+#btnSolicitarTurno{display: none;}
+.btn{margin: auto;padding: 0; margin-top: 5%;width: 375px;justify-content: space-between;display: flex;box-shadow: none;border: none;border-radius: 0;align-items: center;}
+:focus{outline: solid 1px #4b0081;}
+input:focus{border: #d7b4f0 1px;}
+p{margin: 5% 0%;}
+#confirm-horario, #confirm-dia, #confirm-domicilio, #confirm-nombre, #confirm-correo, #confirm-estilo, #confirm-wsp {border: none; padding: 10px;outline: none;background-color: #d7b4f0;width: 200px;color: darkslateblue;font-weight: 700;text-align: center;text-transform: uppercase;}
+
+#checkDiv {
+    transform: translate(-50%, -50%);
+    color: #4b0081;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: #4b0081 1px solid;
+    border-radius: 30px;
+    display: none;
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 2s ease-in-out; /* Transición de opacidad durante 2 segundos */
+}
+
+#checkDiv.show {
+    display: flex;
+    animation: fadeInAndOut 4s ease-in-out; /* Animación para mostrar y desvanecer durante 2 segundos */
+}
+
+.material-symbols-outlined {
+    font-size: 16rem;
+    margin-left: 5px;
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.error{color: red;text-align: center;padding: 0;margin: 0;display: none;}
+
+.terms-checkbox {
+    display: flex;
+    width: 300px;
+    margin: auto;
+    margin-top: 2.5%;
+    justify-content: center;
+    align-items: center;
+}
+.error-label {
+    border: 2px solid red;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    border: none;
+    box-shadow: none;
+}
+
+label {
+
+    font-size: 14px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width:480px){
+    form{width: 98%;padding: 5%;}
+    .btn{margin-top: 10%;}
+    
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{display: none;}
+

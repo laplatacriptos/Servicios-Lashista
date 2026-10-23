@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Agenda tu turno con Lashista y disfruta de servicios profesionales de pestañas. Reserva con nosotros para obtener promociones exclusivas, atención puntual y la comodidad de servicio a domicilio. ¡Acentúa tu mirada con Lashista, la elección perfecta para realzar tu belleza!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serciciosLashista - Turnos. Solicitar turno con lashista. Lashista en La Plata. Lashista zona sur</title>
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4MQQ638');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YREQEZ6HTC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YREQEZ6HTC');
+</script>
+
+
+    <link rel="stylesheet" href="./css/turnos.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4MQQ638"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <h4>Servicios<strong>Lashista</strong></h4>
+        </a>
+    </div>
+</header>
+<main>
+    <h1>Solicitar turno:</h1>
+    <form action="https://formsubmit.co/julieta@servicioslashista.com" method="POST">
+
+        <section id="confirm-form">
+
+            <h2>Por favor, confirma tus datos</h2>
+            <p>Dia del turno: </p> <input type="text" name="dia" id="confirm-dia" required readonly />
+            <p>Horario: </p> <input type="text" name="horario" id="confirm-horario" required readonly />
+            <p>Domicilio: </p> <input type="text" name="domicilio" id="confirm-domicilio" required readonly />
+            <p>Nombre: </p> <input type="text" name="nombre" id="confirm-nombre" required readonly />
+            <p>Correo Electrónico: </p> <input type="text" name="email" id="confirm-correo" required readonly />
+            <p>Estilo: </p> <input type="text" name="efecto" id="confirm-estilo" required readonly />
+            <p>Telefono de contacto: </p> <input type="text" name="whatsapp" id="confirm-wsp" required readonly />
+            <!-- Agrega más campos aquí -->
+        </section>
+        <section id="form">
+            <label for="dia">Dia: <em>*</em></label>
+            <input type="date" id="dia" required>
+            <select id="horario">
+                <option value="mañana">Por la mañana</option>
+                <option value="tarde">Por la tarde</option>
+            </select>
+            <label for="domicilio">Domicilio: <em>*</em></label>
+            <input type="text" id="domicilio" required></label>
+            <label for="nombre">Nombre: <em>*</em></label>
+            <input type="text" id="nombre" required>
+            <label for="correo">Correo electrónico: <em>*</em></label>
+            <input type="email" id="correo" required>
+            <label for="wsp">whatsapp: <em>*</em></label>
+            <input type="text" id="wsp" required>
+            <select id="estilo">
+                <option value="efectoRimel" id="efectoRimel">efecto Rimel</option>
+                <option value="efecto2D" id="efecto2D">efecto 2D</option>
+                <option value="efecto3D" id="efecto3D">efecto 3D</option>
+                <option value="efectoRusso" id="efectoRusso">Russo</option>
+                <option value="efectoLifting" id="efectoLifting">Lifting</option>
+                <option value="efectoMegaVolumen" id="efectoMegaVolumen">Megavolumen</option>
+                <option value="noLoSeAun" id="noLoSeAun">No lo sé aún!</option>
+            </select>
+        </section>
+
+        <div class="terms-checkbox">
+            <label for="terms"></label><input type="checkbox" id="terms" name="terms" style="max-width: 20px;" required>
+            Acepto los <a href="./terminos-y-condiciones.html">Términos y Condiciones</a></label>
+        </div>
+
+        <p class="error">Completar todos los campos <em>*</em></p>
+
+        <section class="btn">
+            <button type="reset" id="btnModificar" onclick="modificar()">Modificar</button>
+            <div>
+                <button type="button" id="btnMostrarConfirmacion" onclick="mostrarConfirmacion()">Solicitar</button>
+                <button type="submit" name="btnSolicitarTurno" id="btnSolicitarTurno" onclick="confirmar()">Confirmar</button>
+            </div>
+        </section>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://servicioslashista.com/turnos.html">
+        <div class="check" id="checkDiv">
+            Todo Listo
+            <span class="material-symbols-outlined">
+                check_circle
+            </span>
+        </div>
+        
+    </form>
+</main>
+    <script src="./js/turnos.js"></script>
+</body>
+
+</html>

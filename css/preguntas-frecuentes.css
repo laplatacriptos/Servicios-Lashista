@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;400;600;900&family=Raleway:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*tipografia: font-family: 'Lato', sans-serif; */
+/*Tipografias: 
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Lato', sans-serif;text-decoration: none;}
+html, body{width: 100%;overflow-x: hidden;}
+
+/*body{background-color: #4b0081;}*/
+.logo{display: flex;align-items: center;justify-content: center;background-color: hsl(0, 0%, 13%);height: 90px;}
+.logo h4{font-size: 1rem;color: white;}
+.logo strong{font-size: 1.5rem;font-weight: 700;color: white;}
+h2{color: #4b0081;}
+h1{font-size: 2rem; color: #4b0081;text-align: center;text-transform: uppercase; font-weight: 900;padding: 5%;}
+
+/*Nosotros Materiales y PREGUNTAS FRECUENTES*/
+main .divline1{font-family: 'Montserrat', sans-serif;width: auto;margin: auto;font-weight: 900;padding: 0% 5% 2.5% 5%;}/*Generales*/
+main .divline1 section{width: 47.5%;max-height: 500px;margin: 2.5%;}
+main .divline1 section h2{font-size: 2rem; font-weight: 900;text-transform: uppercase;color: #4b0081;}
+main .divline1 p{font-weight: 400;font-size: 1.5rem;}
+
+
+/*PREGUNTAS FRECUENTES PRIMERA SESION*/
+main .divline1 div:nth-child(3){display: none; align-items: center;justify-content: left;margin: 2.5%;}/*Div mi primera sesion boton ver mas*/
+main .divline1 div:nth-child(3) section{text-align: start;}
+main .divline1 div:nth-child(3) button{font-size: 1rem;font-weight: 900;background:none; background-color: #4b0081;border: transparent solid 0.5px;border-radius: 5px;color: white;padding: 10px 20px;margin: auto;margin-top: 2%;margin-bottom: 5%;}
+main .divline1 div:nth-child(3) button:hover{background-color: white;cursor: pointer;transition: 0.5s ease-in-out;color: #4b0081;border: #4b0081 solid 0.5px;}
+main .divline1 div:nth-child(3) img{margin: 2.5% 2.5% 0% 0%;width: 500px;max-height: 500px;}
+/*PREGUNTAS FRECUENTES CUIDADOS*/
+main .divline1 div:nth-child(6){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(6) section{text-align: start;}
+main .divline1 div:nth-child(6) button{font-size: 1rem;font-weight: 900;background:none; background-color: #4b0081;border: transparent solid 0.5px;border-radius: 5px;color: white;padding: 10px 20px;margin: auto;margin-top: 2%;margin-bottom: 5%;}
+main .divline1 div:nth-child(6) button:hover{background-color: white;cursor: pointer;transition: 0.5s ease-in-out;color: #4b0081;border: #4b0081 solid 0.5px;}
+main .divline1 div:nth-child(6) img{margin: 2.5% 2.5% 0% 0%;width: 500px;max-height: 500px;}
+/*PREGUNTAS FRECUENTES EMBARAZADAS*/
+main .divline1 div:nth-child(9){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(9) section{text-align: start;}
+main .divline1 div:nth-child(9) button{font-size: 1rem;font-weight: 900;background:none; background-color: #4b0081;border: transparent solid 0.5px;border-radius: 5px;color: white;padding: 10px 20px;margin: auto;margin-top: 2%;margin-bottom: 5%;}
+main .divline1 div:nth-child(9) button:hover{background-color: white;cursor: pointer;transition: 0.5s ease-in-out;color: #4b0081;border: #4b0081 solid 0.5px;}
+main .divline1 div:nth-child(9) img{margin: 2.5% 2.5% 0% 0%;width: 500px;height:max-content; max-height: 500px;}
+/*PREGUNTAS FRECUENTES CUANTO DURA*/
+main .divline1 div:nth-child(12){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(14){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(16){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(18){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+main .divline1 div:nth-child(20){display: none; align-items: center;justify-content: left;margin: 2.5%;}
+
+/*ARTICLES*/
+main article{width: 100%;border: rgb(230, 236, 248) solid 0.5px; text-align: center;font-family: 'Raleway', sans-serif;color: hsl(0, 0%, 13%);display: none;border-radius: 20px;padding: 2.5%;}
+article p{font-weight: 600;font-size: 1.5rem;margin-bottom: 2%;}
+main article strong{font-weight: 900;font-size: 2rem;margin-bottom: 2.5%;}
+main article ol{width: 85%; margin: auto;}
+main article li{text-align: left;font-weight: 600;font-size: 2rem;vertical-align: middle;}
+main article li h3{font-size: 2rem;font-weight: 600;}
+main article li p{font-size: 1.5rem;font-weight: 400;}
+main article button{font-size: 1rem;font-weight: 600;background:none; background-color: #4b0081;border: none;border-radius: 5px;color: white;padding: 10px 20px;margin: auto;text-align: center;}
+main article button:hover{background-color: white;cursor: pointer;transition: 0.5s ease-in-out;color: #4b0081;border: #4b0081 solid 0.5px;}
+
+/*MENU DESPLEGABLE PREGUNTAS FRECUENTES*/
+.fa-down, .fa-down2, .fa-down3, .fa-down4, .fa-down5, .fa-down6, .fa-down7, .fa-down8{text-align: start;display: block;padding: 2%}
+.fa-down:hover, .fa-down2:hover, .fa-down3:hover, .fa-down4:hover, .fa-down5:hover, .fa-down6:hover, .fa-down7:hover, .fa-down8:hover{cursor: pointer;background-color: rgba(238, 235, 241, 0.384);} 
+.fa-down span, .fa-down p, .fa-down2 span, .fa-down2 p, .fa-down3 span, .fa-down3 p , .fa-down4 span, .fa-down4 p, .fa-down5 span, .fa-down5 p, .fa-down6 span, .fa-down6 p, .fa-down7 span, .fa-down7 p, .fa-down8 span, .fa-down8 p{font-size: 1rem;color: rgb(163, 146, 100);border-radius: 10px; margin: auto;display: inline;}
+
+/*AGREGAR PREGUNTAS FRECUENTES*/
+.contact-form{padding: 2.55%;width: 800px;margin: auto;}
+.contact-form h3{font-size:18px;}
+.contact-form form{margin-top:10px;}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:5px;resize: none;}
+.contact-form button{background-color:#333;color:#fff;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;}
+.contact-form button:hover{background-color:#222;}
+
+/* Estilos para el pie de página */
+.footer-pie{background-color: #222;text-align: center;padding: 10px 0;width: 100%;}
+.footer-pie p{padding: 0% 5%;font-size: 9px;color: white;font-family: 'Montserrat', sans-serif;text-align: center;}
+
+a{color: black;text-decoration: underline;}
+@media screen and (max-width:480px){
+ 
+    .footer-pie{margin-top: 20%;}
+    p{font-size: 1rem;margin-bottom: 5%;}
+    h1{padding: 5%;}
+    .footer-pie p{padding: 0;margin: 0;}
+    }
+
+@media screen and (max-width:950px) {
+
+    /*MAIN*/
+    
+    .contact-form{width: 100%;}
+    main .divline1 div:nth-child(1){flex-direction: column;}
+    main .divline1 div:nth-child(3){flex-direction: column-reverse;text-align: center;}
+    main .divline1 div:nth-child(6){flex-direction: column-reverse;text-align: center;}
+    main .divline1 div:nth-child(9){flex-direction: column-reverse;text-align: center;}
+    main .divline1 section{width: 100%;text-align: center;}
+    main .divline1 section h2{text-align: center;}
+    /*main .divline1 section p{text-align: center;font-size: 1.2rem;}*/
+    main article button{text-align: center;margin: auto;}
+}
+
+@media screen and (max-width:480px){
+    main .divline1 p{font-size: 1rem; font-weight: 600;}
+main .divline1 div:nth-child(3) img{width: 300px;margin: auto;}
+main .divline1 div:nth-child(6) img{width: 300px;margin: auto;}
+main .divline1 div:nth-child(9) img{width: 300px;margin: auto;}
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{display: none;}
