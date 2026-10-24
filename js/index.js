@@ -208,7 +208,7 @@ contenedores.forEach(contenedor => {
             contenedor.querySelector('.contenedorPromo section').style.display = 'none';
             precioSinDescuentoPromo.style.display = 'none';
             precioConDescuentoPromo.innerText = `$${valorSinDescuento}-.`;
-            contenedor.style.marginTop = "30%";
+            contenedor.style.padding = "60px";
         } else {
 
             precioConDescuentoPromo.innerText = `$${valorSinDescuento - (valorSinDescuento * valorPorcentaje / 100)}-.`;
