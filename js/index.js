@@ -166,96 +166,93 @@ function cierraMenu() {
 
 /*TEMPORIZADORES*/
 
+
 const contenedores = document.querySelectorAll('.contenedorPromo');
 
+const temporizadorGlobal = document.querySelector('.temporizador');
+const txtDias = temporizadorGlobal.querySelector('.txtDias');
+const txtHoras = temporizadorGlobal.querySelector('.txtHoras');
+const txtMinutos = temporizadorGlobal.querySelector('.txtMinutos');
+const txtSegundos = temporizadorGlobal.querySelector('.txtSegundos');
+
+// Fecha de finalización de la promoción
+const finPromo = new Date(2026, 9, 30, 23, 59, 59);
+
+let intervalo;
+
+// Calcular los precios de las promociones
 contenedores.forEach(contenedor => {
-    const txtDias = contenedor.querySelector('.txtDias');
-    const txtHoras = contenedor.querySelector('.txtHoras');
-    const txtMinutos = contenedor.querySelector('.txtMinutos');
-    const txtSegundos = contenedor.querySelector('.txtSegundos');
+    const porcentaje = contenedor.querySelector('.porcentaje strong');
+    const precioOriginal = contenedor.querySelector('.promocion div h3');
+    const precioFinal = contenedor.querySelector('.promocion div h4');
 
-    let porcentaje = contenedor.querySelector('.porcentaje strong');
-    let precioSinDescuentoPromo = contenedor.querySelector('.promocion div h3');
-    let precioConDescuentoPromo = contenedor.querySelector('.promocion div h4');
+    const descuento = parseFloat(porcentaje.textContent);
+    const valorOriginal = parseFloat(
+        precioOriginal.textContent.replace(/[^\d.,]/g, '').replace(',', '.')
+    );
 
+    const valorConDescuento = Math.round(
+        valorOriginal - (valorOriginal * descuento / 100)
+    );
 
-    /*Asignamos variables a los valores numéricos de porcentaje y a los 2 precios con y sin descuento*/
-    let porcentajeDescuento = porcentaje.textContent;
-    let valorPorcentaje = parseFloat(porcentajeDescuento);
-    console.log(valorPorcentaje);//Valor numerico de porcentaje
-    let sinDescuento = precioSinDescuentoPromo.textContent;
-    let valorSinDescuento = parseFloat(sinDescuento.match(/\d+/)[0]);
-    console.log(valorSinDescuento);//Valor numerico de precio sin descuento
-    /*let conDescuento = precioConDescuentoPromo.textContent;
-    let valorConDescuento = parseFloat(conDescuento.match(/\d+/)[0]);
-    console.log(valorConDescuento);*/
+    precioFinal.textContent = `$${valorConDescuento}-.`;
+});
 
-    function temporizador() {
-        /*Creamos ojetos de fecha*/
-        let inicioPromo = new Date();
-        let finPromo = new Date(2026, 10, 31,);
-        //console.log(inicioPromo);
+function temporizador() {
+    const diferencia = finPromo.getTime() - Date.now();
 
-        /*Calculamos diferencia */
-        let diferencia = finPromo - inicioPromo;
-        //console.log(diferencia);
+    // Si la promoción terminó
+    if (diferencia <= 0) {
+        clearInterval(intervalo);
 
-        //Franamos el temporizador
-        if (diferencia <= 0) {
-            clearInterval(intervalo);
-            contenedor.querySelector('.contenedorPromo h5').style.display = 'none';
-            contenedor.querySelector('.porcentaje').style.display = 'none';
-            contenedor.querySelector('.contenedorPromo section').style.display = 'none';
-            precioSinDescuentoPromo.style.display = 'none';
-            precioConDescuentoPromo.innerText = `$${valorSinDescuento}-.`;
-            contenedor.style.padding = "60px";
-        } else {
+        // Ocultar todo el temporizador, incluidas las cajas
+        temporizadorGlobal.style.display = 'none';      
 
-            precioConDescuentoPromo.innerText = `$${valorSinDescuento - (valorSinDescuento * valorPorcentaje / 100)}-.`;
+        // Restaurar los precios originales en todas las tarjetas
+        contenedores.forEach(contenedor => {
+            const porcentaje = contenedor.querySelector('.porcentaje');
+            const precioOriginal = contenedor.querySelector('.promocion div h3');
+            const precioFinal = contenedor.querySelector('.promocion div h4');
 
-            /*Convertimos unidades de tiempo*/
-            let segundos = Math.trunc(diferencia / 1000);
-            //console.log(segundos);
-            let minutos = Math.trunc(segundos / 60);
-            //console.log(minutos);
-            let horas = Math.trunc(minutos / 60)
-            //console.log(horas);
-            let dias = Math.trunc(horas / 24);
-            //console.log(dias);
+            const valorOriginal = parseFloat(
+                precioOriginal.textContent.replace(/[^\d.,]/g, '').replace(',', '.')
+            );
 
-            /*Calculamos los tiempos restantes*/
-            horas = horas % 24;
-            //console.log(horas);
-            minutos = minutos % 60;
-            //console.log(minutos);
-            segundos = segundos % 60;
-            //console.log(segundos);
+            porcentaje.style.display = 'none';
+            precioOriginal.style.display = 'none';
+            precioFinal.textContent = `$${valorOriginal}-.`;
 
-            /*Agregamos un 0 numeros debajo de 10*/
-            if (dias < 10) {
-                dias = `0${dias}`;
-            }
-            if (horas < 10) {
-                horas = `0${horas}`;
-            }
-            if (minutos < 10) {
-                minutos = `0${minutos}`;
-            }
-            if (segundos < 10) {
-                segundos = `0${segundos}`;
-            }
-            /*mostramos horas minutos segundos y dias*/
-            txtDias.innerText = dias;
-            txtHoras.innerText = horas;
-            txtMinutos.innerText = minutos;
-            txtSegundos.innerText = segundos;
-        }
+            // Aplicar el padding de 60px a cada tarjeta de promo individualmente
+            contenedor.style.padding = '60px 0';
+            
+        });
+
+        // No modificar el fondo ni los estilos de las tarjetas
+        return;
     }
 
-    let intervalo = setInterval(temporizador, 1000);
-    temporizador();
+    // Si la promoción sigue vigente
+    temporizadorGlobal.style.display = '';
 
-});
+    let segundos = Math.trunc(diferencia / 1000);
+    let minutos = Math.trunc(segundos / 60);
+    let horas = Math.trunc(minutos / 60);
+    const dias = Math.trunc(horas / 24);
+
+    horas %= 24;
+    minutos %= 60;
+    segundos %= 60;
+
+    txtDias.textContent = String(dias).padStart(2, '0');
+    txtHoras.textContent = String(horas).padStart(2, '0');
+    txtMinutos.textContent = String(minutos).padStart(2, '0');
+    txtSegundos.textContent = String(segundos).padStart(2, '0');
+}
+
+// Crear el intervalo antes de ejecutar la función
+intervalo = setInterval(temporizador, 1000);
+temporizador();
+
 
 //@keyframes para los iconos grandes 
 document.addEventListener("DOMContentLoaded", function () {
